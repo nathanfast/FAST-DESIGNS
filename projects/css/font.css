@@ -1,0 +1,37 @@
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url('./NeueMontreal/PPNeueMontreal-Regular.eot');
+    src: url('./NeueMontreal/PPNeueMontreal-Regular.eot') format('embedded-opentype'),
+        url('./NeueMontreal/PPNeueMontreal-Regular.woff2') format('woff2'),
+        url('./NeueMontreal/PPNeueMontreal-Regular.woff') format('woff'),
+        url('./NeueMontreal/PPNeueMontreal-Regular.ttf') format('truetype'),
+        url('./NeueMontreal/PPNeueMontreal-Regular.ttf') format('svg');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('./NeueMontreal/PPNeueMontreal-Medium.eot');
+    src: url('./NeueMontreal/PPNeueMontreal-Medium.eot') format('embedded-opentype'),
+        url('./NeueMontreal/PPNeueMontreal-Medium.woff2') format('woff2'),
+        url('./NeueMontreal/PPNeueMontreal-Medium.woff') format('woff'),
+        url('./NeueMontreal/PPNeueMontreal-Medium.ttf') format('truetype'),
+        url('./NeueMontreal/PPNeueMontreal-Medium.svg') format('svg');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+  font-family: 'DotGothic16';
+  src: url('./DotGothic16/DotGothic16-Regular.eot');
+  src: url('./DotGothic16/DotGothic16-Regular.eot') format('embedded-opentype'),
+      url('./DotGothic16/DotGothic16-Regular.woff2') format('woff2'),
+      url('./DotGothic16/DotGothic16-Regular.woff') format('woff'),
+      url('./DotGothic16/DotGothic16-Regular.ttf') format('truetype'),
+      url('./DotGothic16/DotGothic16-Regular.svg') format('svg');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+  }

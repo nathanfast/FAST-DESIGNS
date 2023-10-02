@@ -1,0 +1,92 @@
+  .accordion-button {
+    position: relative;
+    width: 100%;
+    padding: 24px 16px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+    transition: all .2s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+    color: var(--white);
+    border-top: 1px solid #444444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-button[aria-expanded="true"] {
+    border-color: var(--white);
+  }
+  .accordion-button[aria-expanded="true"] .accordion_icon{
+    transform: rotate(-180deg) !important;
+  }
+  .accordion-button:hover {
+    border-color: var(--white);
+  }
+  .accordion_icon{
+    transition: all .2s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .accordion-item{
+    overflow: hidden;
+  }
+  .accordion-button:hover {
+    z-index: 2;
+  }
+  .accordion-button:focus {
+    z-index: 3;
+    outline: 0;
+  }
+  .accordion-header {
+    margin-bottom: 0;
+  }
+  .accordion-body {
+    padding: 24px 16px;
+    background-color: transparent;
+    width: 75%;
+  }
+  @media(max-width: 1025px) {
+    .accordion-body {
+        width: calc(100% - 10px);
+    }
+  }
+  .accordion-flush .accordion-collapse {
+    border-width: 0;
+  }
+  .accordion-flush .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+  .accordion-flush .accordion-item:first-child {
+    border-top: 0;
+  }
+  .accordion-flush .accordion-item:last-child {
+    border-bottom: 0;
+  }
+  .accordion-flush .accordion-item .accordion-button, .accordion-flush .accordion-item .accordion-button.collapsed {
+    border-radius: 0;
+  }
+  .collapse:not(.show) {
+    display: none;
+  }
+  
+  .collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .collapsing {
+      transition: none;
+    }
+  }
+  .collapsing.collapse-horizontal {
+    width: 0;
+    height: auto;
+    transition: width 0.5s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .collapsing.collapse-horizontal {
+      transition: none;
+    }
+  }
