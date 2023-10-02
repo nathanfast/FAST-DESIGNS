@@ -918,6 +918,71 @@ NATHAN // FAST
 </div>
 <div class="scroll_to-top">
 </div>
+<div id="mobilePopup" class="popup">
+  <div class="popup-content">
+    <p>Dies ist das mobile Popup.</p>
+    <button id="closePopup">Schließen</button>
+  </div>
+</div>
+
+/* Styling für das Popup */
+<style>
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Media Query für mobile Geräte */
+@media (max-width: 768px) {
+  .popup {
+    display: block;
+  }
+}
+</style>
+<script>
+  // JavaScript-Code, um den Filterparameter aus der URL zu lesen
+  const urlParams = new URLSearchParams(window.location.search);
+  const filter = urlParams.get('filter');
+
+  // Code, um den Filter auf "Logos" einzustellen, wenn filter gleich "logos" ist
+  if (filter === 'logos') {
+    // Setze den Filter auf "Logos" (z.B., indem du die Klasse 'active' änderst)
+    const logosButton = document.querySelector('.display_mode-button[data-mode="list"]');
+    logosButton.classList.add('active');
+  }
+
+  // JavaScript-Code, um das Popup nur auf mobilen Geräten zu öffnen
+  document.addEventListener('DOMContentLoaded', function () {
+    const mobilePopup = document.getElementById('mobilePopup');
+    const closePopup = document.getElementById('closePopup');
+
+    // Überprüfe die Bildschirmbreite
+    if (window.innerWidth <= 768) {
+      // Zeige das Popup an
+      mobilePopup.style.display = 'block';
+
+      // Schließe das Popup, wenn auf den Schließen-Button geklickt wird
+      closePopup.addEventListener('click', function () {
+        mobilePopup.style.display = 'none';
+      });
+    }
+  });
+</script>
 
 <script type='text/javascript' src='wp-content/themes/alphamark-theme/assets/js/main_js/gsap/gsap.min68b3.js'
   id='GSAP-js'></script>
